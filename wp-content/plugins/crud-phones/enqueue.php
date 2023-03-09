@@ -26,6 +26,17 @@ add_action('wp_enqueue_scripts', 'crud_phones_enqueue_css');
 
 if (!function_exists('crud_phones_enqueue_scripts')){
   function crud_phones_enqueue_scripts(){
+
+    wp_register_script(
+      'bootstrap-js',
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+      array('jquery'),
+      '1.0',
+      true
+    );
+    wp_enqueue_script('bootstrap-js');
+
+
     wp_register_script(
       'crud-phones-javascript',
       plugins_url('public/assets/js/main.js', __FILE__),
