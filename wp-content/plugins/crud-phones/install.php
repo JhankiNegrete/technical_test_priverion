@@ -8,9 +8,9 @@ function create_table_phones(){
 
   $sql = "CREATE TABLE $table_name (
     id int(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-    nombre varchar(55) NOT NULL,
-    precio decimal(9,2) NOT NULL,
-    cantidad int(4) NOT NULL,
+    name varchar(55) NOT NULL,
+    price decimal(9,2) NOT NULL,
+    stock int(4) NOT NULL,
     PRIMARY KEY (id)
   );";
   
